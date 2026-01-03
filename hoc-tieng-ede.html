@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Học tiếng Ê Đê - Lữ đoàn 572</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family: Arial, sans-serif;
+  background:#f0f8ff;
+  padding:20px;
+}
+header{
+  background:rgba(255,255,255,0.85);
+  padding:20px;
+  text-align:center;
+  border-radius:0 0 20px 20px;
+  backdrop-filter: blur(5px);
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+header h1{
+  color:#007BFF;
+  font-size:1.7rem;
+}
+
+section{
+  max-width:900px;
+  margin:30px auto;
+}
+
+.lesson-card{
+  background:rgba(255,255,255,0.75);
+  border-radius:15px;
+  padding:20px;
+  margin-bottom:15px;
+  cursor:pointer;
+  transition:0.3s;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+.lesson-card:hover{
+  transform:translateY(-4px);
+}
+
+.lesson-header{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+.lesson-icon{
+  font-size:2.2rem;
+}
+.lesson-title{
+  font-weight:bold;
+  font-size:1.1rem;
+}
+
+.lesson-content{
+  margin-top:12px;
+  display:none;
+  padding-left:45px;
+  line-height:1.7;
+}
+
+button{
+  background:#1e3c72;
+  color:#fff;
+  border:none;
+  border-radius:10px;
+  padding:10px 15px;
+  cursor:pointer;
+  margin-bottom:20px;
+}
+button:hover{
+  background:#2a5298;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Học tiếng Ê Đê</h1>
+</header>
+
+<section>
+
+<a href="noidung-hoc.html">
+  <button>⏪ Quay lại Học tập Nghị quyết</button>
+</a>
+
+<!-- BÀI 1 -->
+<div class="lesson-card" onclick="toggle(1)">
+  <div class="lesson-header">
+    <div class="lesson-icon">🗣️</div>
+    <div class="lesson-title">Bài 1: Chào hỏi cơ bản</div>
+  </div>
+  <div class="lesson-content" id="b1">
+    Kâo adê – Xin chào<br>
+    Hăp kâo? – Khỏe không?<br>
+    Mơ̆ng kâo – Cảm ơn<br>
+    Kâo h’lang – Xin lỗi<br>
+    Hlao adê – Tạm biệt
+  </div>
+</div>
+
+<!-- BÀI 2 -->
+<div class="lesson-card" onclick="toggle(2)">
+  <div class="lesson-header">
+    <div class="lesson-icon">👥</div>
+    <div class="lesson-title">Bài 2: Xưng hô</div>
+  </div>
+  <div class="lesson-content" id="b2">
+    Ama – Cha / bác trai<br>
+    Amí – Mẹ / bác gái<br>
+    Anh – Kâo anah<br>
+    Em – Kâo mđeh<br>
+    Già làng – Ama plây
+  </div>
+</div>
+
+<!-- BÀI 3 -->
+<div class="lesson-card" onclick="toggle(3)">
+  <div class="lesson-header">
+    <div class="lesson-icon">🏠</div>
+    <div class="lesson-title">Bài 3: Gia đình</div>
+  </div>
+  <div class="lesson-content" id="b3">
+    Gia đình – Kđiê<br>
+    Ông bà – Ama amí kđiê<br>
+    Con cái – Anah mđeh<br>
+    Nhà dài – Kđiê êban
+  </div>
+</div>
+
+<!-- BÀI 4 -->
+<div class="lesson-card" onclick="toggle(4)">
+  <div class="lesson-header">
+    <div class="lesson-icon">🌾</div>
+    <div class="lesson-title">Bài 4: Lao động</div>
+  </div>
+  <div class="lesson-content" id="b4">
+    Làm rẫy – Mđăm rẫy<br>
+    Trồng lúa – Mđăm mja<br>
+    Đi làm – Kâo mđăm<br>
+    Nghỉ ngơi – Mđrao
+  </div>
+</div>
+
+<!-- BÀI 5 -->
+<div class="lesson-card" onclick="toggle(5)">
+  <div class="lesson-header">
+    <div class="lesson-icon">🕒</div>
+    <div class="lesson-title">Bài 5: Thời gian</div>
+  </div>
+  <div class="lesson-content" id="b5">
+    Hôm nay – Hơm nay<br>
+    Ngày mai – Hơm mai<br>
+    Sáng – Mdrăm<br>
+    Chiều – Mđiê<br>
+    Tối – Mdrê
+  </div>
+</div>
+
+<!-- BÀI 6 -->
+<div class="lesson-card" onclick="toggle(6)">
+  <div class="lesson-header">
+    <div class="lesson-icon">📍</div>
+    <div class="lesson-title">Bài 6: Chỉ đường</div>
+  </div>
+  <div class="lesson-content" id="b6">
+    Trái – Klei<br>
+    Phải – Drăh<br>
+    Trước – Hma<br>
+    Sau – Hđeh<br>
+    Gần – Dơng
+  </div>
+</div>
+
+<!-- BÀI 7 -->
+<div class="lesson-card" onclick="toggle(7)">
+  <div class="lesson-header">
+    <div class="lesson-icon">🚶</div>
+    <div class="lesson-title">Bài 7: Hành động</div>
+  </div>
+  <div class="lesson-content" id="b7">
+    Đi – Kâo nao<br>
+    Đứng – Kâo jư<br>
+    Ngồi – Kâo nư<br>
+    Ăn – Kâo mnam<br>
+    Uống – Kâo mdrăm
+  </div>
+</div>
+
+<!-- BÀI 8 -->
+<div class="lesson-card" onclick="toggle(8)">
+  <div class="lesson-header">
+    <div class="lesson-icon">🎉</div>
+    <div class="lesson-title">Bài 8: Lễ hội – phong tục</div>
+  </div>
+  <div class="lesson-content" id="b8">
+    Lễ hội – Lễ plây<br>
+    Cồng chiêng – Ching<br>
+    Cúng bến nước – Cúng dak
+  </div>
+</div>
+
+<!-- BÀI 9 -->
+<div class="lesson-card" onclick="toggle(9)">
+  <div class="lesson-header">
+    <div class="lesson-icon">🤝</div>
+    <div class="lesson-title">Bài 9: Dân vận</div>
+  </div>
+  <div class="lesson-content" id="b9">
+    Giúp đỡ – Kâo glơi<br>
+    Đoàn kết – Kâo sang<br>
+    Nghe dân nói – Kâo thlă
+  </div>
+</div>
+
+<!-- BÀI 10 -->
+<div class="lesson-card" onclick="toggle(10)">
+  <div class="lesson-header">
+    <div class="lesson-icon">📘</div>
+    <div class="lesson-title">Bài 10: Từ vựng tổng hợp</div>
+  </div>
+  <div class="lesson-content" id="b10">
+    Ôn tập từ vựng chào hỏi, gia đình, lao động, thời gian, giao tiếp
+  </div>
+</div>
+
+</section>
+
+<script>
+function toggle(num){
+  const el = document.getElementById("b"+num);
+  el.style.display = el.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
